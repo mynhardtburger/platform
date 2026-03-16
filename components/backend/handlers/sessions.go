@@ -727,6 +727,9 @@ func CreateSession(c *gin.Context) {
 	if strings.TrimSpace(req.InitialPrompt) != "" {
 		spec["initialPrompt"] = req.InitialPrompt
 	}
+	if req.InactivityTimeout != nil {
+		spec["inactivityTimeout"] = *req.InactivityTimeout
+	}
 
 	session := map[string]interface{}{
 		"apiVersion": "vteam.ambient-code/v1alpha1",

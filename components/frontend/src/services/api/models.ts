@@ -6,6 +6,8 @@
 import { apiClient } from './client';
 import type { ListModelsResponse } from '@/types/api';
 
+export const DEFAULT_MODEL_ID = "claude-sonnet-4-5" as const;
+
 /**
  * Get available models for a project (workspace-aware, checks overrides).
  * Optionally filter by provider (e.g. "anthropic", "google").
